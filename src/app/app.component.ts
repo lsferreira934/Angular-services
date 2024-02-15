@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Pokemon } from './models/pokemon';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-service';
+
+  pokemonDetail: Pokemon | undefined;
+
+  constructor() {}
+
+  onPokemonFound(pokemon: any) {
+    this.pokemonDetail = pokemon;
+  }
 }
